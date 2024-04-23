@@ -33,4 +33,6 @@ urlpatterns = [
     # then if we see example, render the main function page
 
     # path('', include('api.urls')),
+
+    path('', include('frontend.urls')),
 ]
