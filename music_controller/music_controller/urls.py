@@ -19,7 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
     # Whatever web address you enter [indicated by path('') ]
     # Go into your api.urls file [indicated by path(include('api.urls'))]
     # Remeber to import the [include] function from django.urls
@@ -33,5 +32,5 @@ urlpatterns = [
     # localhost:8000/api/example
     # then if we see example, render the main function page
 
-    path('', include('api.urls')),
+    # path('', include('api.urls')),
 ]
