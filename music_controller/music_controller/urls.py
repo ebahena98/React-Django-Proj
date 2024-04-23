@@ -23,5 +23,15 @@ urlpatterns = [
     # Whatever web address you enter [indicated by path('') ]
     # Go into your api.urls file [indicated by path(include('api.urls'))]
     # Remeber to import the [include] function from django.urls
+    path('api/', include('api.urls')),
+
+    # path('api/', include('api.urls'))
+    # localhost:8000/api/
+    # whenever we get api/ , send the rest of the url
+    # to api.urls then check inside the urlpatterns and
+    # check if the path('example') is included in the url
+    # localhost:8000/api/example
+    # then if we see example, render the main function page
+
     path('', include('api.urls')),
 ]

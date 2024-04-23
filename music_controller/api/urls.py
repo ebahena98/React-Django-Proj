@@ -7,8 +7,16 @@ from .views import main
 urlpatterns = [
     # This urlpatterns array contains a:
     # path function that contains ("string", function main)
-    path('', main)
+    path('home', main),
     # MEANING: If we get a url that is blank, path(''), then
-    # call the function main from api.views
-    # the main function will return a HttpResponse("hello")
+    # call the function main from api.views and do whatever
+    # the main function does which will return a HttpResponse("hello")
+
+    path('', main),
+    # This means we can have multiple paths
+    # example: localhost:8000/api/home will call the main function
+    # example: localhost:8000/api/ will call the main function as well
 ]
+
+
+# localhost:8000/api/home
